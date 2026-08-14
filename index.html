@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Salam Shaik — modern responsive developer portfolio.">
+  <meta name="theme-color" content="#2563eb">
+  <title>Salam Shaik | Developer Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" id="top">
+    <div class="container nav-wrap">
+      <a class="brand" href="#top" aria-label="Salam Shaik home"><span>SS</span><strong>Salam<span>.</span></strong></a>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation"><span></span><span></span><span></span></button>
+      <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="#home">Home</a><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#contact">Contact</a>
+        <button class="theme-toggle" type="button" aria-label="Switch to dark mode" title="Toggle theme">☾</button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section id="home" class="hero section">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">AI/ML Student • Developer • Problem Solver</p>
+          <h1>Building useful digital experiences with <span>clean code.</span></h1>
+          <p class="hero-text">I’m Salam Shaik, a B.Tech student passionate about web development, AI/ML and creating practical products that make learning and everyday tasks simpler.</p>
+          <div class="hero-actions"><a class="btn btn-primary" href="#projects">View Projects <span>↗</span></a><a class="btn btn-ghost" href="#contact">Let’s Connect</a></div>
+          <div class="quick-stats" aria-label="Highlights"><div><strong>03+</strong><span>Projects</span></div><div><strong>10+</strong><span>Technologies</span></div><div><strong>100%</strong><span>Curiosity</span></div></div>
+        </div>
+        <div class="hero-art reveal" aria-hidden="true"><div class="orb orb-one"></div><div class="orb orb-two"></div><div class="code-card"><div class="window-dots"><i></i><i></i><i></i></div><pre><code><span class="pink">const</span> developer = {
+  name: <span class="green">"Salam Shaik"</span>,
+  focus: <span class="green">"AI + Web"</span>,
+  mindset: <span class="green">"build &amp; learn"</span>
+};
+
+<span class="blue">developer</span>.create();</code></pre></div></div>
+      </div>
+    </section>
+
+    <section id="about" class="section alt">
+      <div class="container two-col">
+        <div class="section-heading reveal"><p class="eyebrow">01 — About</p><h2>Curious mind. <span>Practical builder.</span></h2></div>
+        <div class="about-copy reveal"><p>I enjoy turning ideas into polished, responsive interfaces and useful applications. My learning journey combines programming fundamentals with modern frontend development and AI/ML.</p><p>I care about readable structure, accessibility, responsive behavior and interfaces that feel good on every screen size.</p><div class="about-tags"><span>Responsive Design</span><span>Semantic HTML</span><span>Modern CSS</span><span>JavaScript</span></div></div>
+      </div>
+    </section>
+
+    <section id="skills" class="section">
+      <div class="container"><div class="section-heading centered reveal"><p class="eyebrow">02 — Toolkit</p><h2>Skills that turn ideas into <span>interfaces.</span></h2></div>
+        <div class="skills-grid">
+          <article class="skill-card reveal"><div class="icon">&lt;/&gt;</div><h3>Frontend</h3><p>Semantic, accessible and responsive interfaces built with modern web standards.</p><div class="skill-list"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Responsive UI</span></div></article>
+          <article class="skill-card reveal"><div class="icon">✦</div><h3>AI / ML</h3><p>Exploring intelligent systems, machine learning concepts and AI-powered applications.</p><div class="skill-list"><span>Python</span><span>ML Basics</span><span>AI Tools</span><span>Data Thinking</span></div></article>
+          <article class="skill-card reveal"><div class="icon">⌘</div><h3>Development</h3><p>Strong programming fundamentals and a focus on maintainable project structure.</p><div class="skill-list"><span>C</span><span>Java</span><span>Git</span><span>Problem Solving</span></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section alt">
+      <div class="container"><div class="section-heading reveal"><p class="eyebrow">03 — Selected Work</p><h2>Projects with a <span>purpose.</span></h2></div>
+        <div class="projects-grid">
+          <article class="project-card featured reveal"><div class="project-number">01</div><div class="project-content"><p class="project-type">AI • Education</p><h3>Salam’s Search</h3><p>An AI-powered study assistant concept designed for Indian students, with learning support, question answering and an education-first experience.</p><div class="project-tags"><span>AI</span><span>Android</span><span>Kotlin</span><span>Education</span></div></div><a class="project-arrow" href="#contact" aria-label="Discuss Salam’s Search project">↗</a></article>
+          <article class="project-card reveal"><div class="project-number">02</div><div class="project-content"><p class="project-type">Web • UI</p><h3>Responsive Portfolio</h3><p>A semantic portfolio demonstrating CSS Grid, Flexbox, mobile-first media queries, variables and theme switching.</p><div class="project-tags"><span>HTML</span><span>CSS3</span><span>JavaScript</span></div></div><a class="project-arrow" href="#top" aria-label="View portfolio project">↗</a></article>
+          <article class="project-card reveal"><div class="project-number">03</div><div class="project-content"><p class="project-type">Programming • DSA</p><h3>Algorithm Practice</h3><p>A growing collection of programming and data-structure exercises covering stacks, queues, trees, graphs, sorting and searching.</p><div class="project-tags"><span>C</span><span>Java</span><span>DSA</span></div></div><a class="project-arrow" href="#contact" aria-label="Discuss algorithm project">↗</a></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact-section">
+      <div class="container contact-card reveal"><div><p class="eyebrow">04 — Contact</p><h2>Have an idea? <span>Let’s build it.</span></h2><p>Open to learning, collaborating and building meaningful projects.</p></div><div class="contact-actions"><a class="btn btn-primary" href="mailto:salamshaik3469@gmail.com">Email Me</a><a class="btn btn-ghost" href="https://github.com/salamshaik3469-commits" target="_blank" rel="noopener">GitHub ↗</a></div></div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="container footer-inner"><p>© <span id="year"></span> Salam Shaik. Built with semantic HTML, advanced CSS and vanilla JS.</p><a href="#top">Back to top ↑</a></div></footer>
+  <script src="script.js"></script>
+</body>
+</html>
