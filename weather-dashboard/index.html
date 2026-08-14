@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Real-time weather dashboard using asynchronous JavaScript and public REST APIs." />
+  <title>Live Weather Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <header class="hero">
+      <div>
+        <p class="eyebrow">ASYNC JAVASCRIPT & REST APIs</p>
+        <h1>Live Weather Dashboard</h1>
+        <p class="subtitle">Search any city and view live weather data fetched from a public REST API.</p>
+      </div>
+      <div class="status-pill" id="statusPill" aria-live="polite">Ready</div>
+    </header>
+
+    <section class="search-panel" aria-label="Weather search">
+      <form id="searchForm" class="search-form">
+        <label for="cityInput">City name</label>
+        <div class="search-row">
+          <input id="cityInput" name="city" type="search" placeholder="e.g. Bengaluru, Mumbai, Delhi" autocomplete="off" required />
+          <button id="searchButton" type="submit">Search Weather</button>
+        </div>
+        <div class="quick-cities" aria-label="Quick city searches">
+          <button type="button" class="quick-city" data-city="Bengaluru">Bengaluru</button>
+          <button type="button" class="quick-city" data-city="Mumbai">Mumbai</button>
+          <button type="button" class="quick-city" data-city="Delhi">Delhi</button>
+          <button type="button" class="quick-city" data-city="Hyderabad">Hyderabad</button>
+        </div>
+      </form>
+    </section>
+
+    <section id="errorBox" class="message error" role="alert" hidden></section>
+    <section id="loadingBox" class="message loading" aria-live="polite" hidden>
+      <span class="spinner" aria-hidden="true"></span>
+      Fetching live weather data…
+    </section>
+
+    <section id="weatherSection" class="weather-section" hidden>
+      <div class="location-heading">
+        <div>
+          <p class="eyebrow">CURRENT CONDITIONS</p>
+          <h2 id="locationName">—</h2>
+          <p id="locationMeta">—</p>
+        </div>
+        <div class="weather-symbol" id="weatherSymbol" aria-label="Weather condition">☀️</div>
+      </div>
+
+      <div class="metrics-grid">
+        <article class="metric-card featured">
+          <span class="metric-label">Temperature</span>
+          <strong id="temperature">—</strong>
+          <small id="temperatureUnit">°C</small>
+        </article>
+        <article class="metric-card">
+          <span class="metric-label">Humidity</span>
+          <strong id="humidity">—</strong>
+          <small>% relative humidity</small>
+        </article>
+        <article class="metric-card">
+          <span class="metric-label">Wind Speed</span>
+          <strong id="windSpeed">—</strong>
+          <small id="windUnit">km/h</small>
+        </article>
+        <article class="metric-card">
+          <span class="metric-label">Updated</span>
+          <strong id="updatedTime">—</strong>
+          <small id="dayState">—</small>
+        </article>
+      </div>
+
+      <div class="details-grid">
+        <article class="panel">
+          <div class="panel-heading">
+            <div>
+              <p class="eyebrow">PARSED RESPONSE</p>
+              <h3>Nested JSON Data</h3>
+            </div>
+          </div>
+          <div id="jsonViewer" class="json-viewer" aria-label="Parsed JSON weather response"></div>
+        </article>
+
+        <article class="panel">
+          <div class="panel-heading">
+            <div>
+              <p class="eyebrow">API DETAILS</p>
+              <h3>Request Information</h3>
+            </div>
+          </div>
+          <dl class="request-details">
+            <div><dt>Data source</dt><dd>Open-Meteo</dd></div>
+            <div><dt>Forecast endpoint</dt><dd id="forecastEndpoint">—</dd></div>
+            <div><dt>Coordinates</dt><dd id="coordinates">—</dd></div>
+            <div><dt>Timezone</dt><dd id="timezone">—</dd></div>
+          </dl>
+        </article>
+      </div>
+    </section>
+
+    <footer>
+      <p>Built with HTML, CSS, JavaScript Fetch API, async/await, and public REST endpoints.</p>
+      <p>Weather data provided by Open-Meteo.</p>
+    </footer>
+  </main>
+  <script src="script.js" defer></script>
+</body>
+</html>
