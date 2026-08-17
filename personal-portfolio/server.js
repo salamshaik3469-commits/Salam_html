@@ -45,5 +45,5 @@ app.post("/api/contact", async (req, res) => {
   } catch (error) { console.error(error); res.status(500).json({ error: "Could not save your message." }); }
 });
 
-app.get("*", (_req, res) => res.sendFile(path.join(__dirname, "public", "index.html")));
+app.get("/{*splat}", (_req, res) => res.sendFile(path.join(__dirname, "public", "index.html")));
 app.listen(PORT, () => console.log(`Portfolio running on http://localhost:${PORT}`));
